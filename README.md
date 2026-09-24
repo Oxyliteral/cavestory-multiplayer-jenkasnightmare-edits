@@ -1,6 +1,8 @@
 # cavestory-multiplayer-jenkasnightmare-edits
 
-Edits for autumn-mnya's Jenka's Nightmare for Cave Story Multiplayer. Specific edits currently include:
+Edits for autumn-mnya's Jenka's Nightmare for Cave Story Multiplayer. Download, and overwrite autumn's jenkasnightmare folder with this jenkasnightmare folder.
+
+Specific edits currently include:
 
 **jenkasnightmare.dll**
 

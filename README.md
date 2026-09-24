@@ -10,7 +10,7 @@ Specific edits currently include:
 
 **head.tsc**
 
-*: Edits a certain event to set the correct flag, preventing the game from sometimes starting you from the beginning without loading a save when dying.
+*: Edits a certain event to set the correct flag, preventing the game from sometimes starting you from the beginning without loading a save when dying. (Also makes it so the game always loads a save when clicking retry, as loading with no save file just starts from a new game, so it is not an issue, and prevents certain sequence breaks (saving without flag setting)
 
 **Stage/JN079.pxcm**
 

@@ -19,6 +19,9 @@ Edits for autumn-mnya's Jenka's Nightmare for Cave Story Multiplayer. Specific e
 *: New game starting location set to new game plus prefab house (for use with above edit). To start a true new game, interact with the door.
 
 Based off of CSM's CaveModBase (v1.0.5) found at https://cavestorymultiplayer.com/modding/
+
 Additional references found at:
+
 https://github.com/ClayHanson/CaveStory-Multiplayer-Public/
+
 https://cavestorymultiplayer.com/modding/docs/index.html

@@ -6,7 +6,7 @@ Specific edits currently include:
 
 **jenkasnightmare.dll**
 
-*: Snake reloads every 60 frames.
+*: Snake reloads every 60 frames, 20 with afterburner. Machine gun reloads faster with turbocharge. Spur charges twice as fast with the Ursa Minor (Polar Star capsule new game plus item).
 
 **head.tsc**
 
@@ -18,7 +18,7 @@ Specific edits currently include:
 
 **mod.pxmod**
 
-*: New game starting location set to new game plus prefab house (for use with above edit). To start a true new game, interact with the door.
+*: New game starting location set to new game plus prefab house (for use with above edit). To start a true new game, interact with the door. Additionally, weapons/bullets have been synced to JN. This is most noticeable with the Snake, which has a range increase and different damage values.
 
 Based off of CSM's CaveModBase (v1.0.5) found at https://cavestorymultiplayer.com/modding/
 

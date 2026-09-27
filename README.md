@@ -6,19 +6,23 @@ Specific edits currently include:
 
 **jenkasnightmare.dll**
 
-*: Snake reloads every 60 frames, 20 with afterburner. Machine gun reloads faster with turbocharge. Spur charges twice as fast with the Ursa Minor (Polar Star capsule new game plus item).
+*: Snake reloads every 60 frames, 20 with afterburner. Machine gun reloads faster with turbocharge. Spur charges twice as fast with the Ursa Minor (Polar Star capsule new game plus item). Event skipper comes up during events, press/hold <Map> key to skip, or <Inventory> key to hide the popup. It skips text, <NOD, <CLR, and <FAC. It can skip other TSC like <WAI, but I'm pretty sure <WAI is tied to some animations, therefore doing so may break the game, so I left that function out.
 
 **head.tsc**
 
 *: Edits a certain event to set the correct flag, preventing the game from sometimes starting you from the beginning without loading a save when dying. (Also makes it so the game always loads a save when clicking retry, as loading with no save file just starts from a new game, so it is not an issue, and prevents certain sequence breaks (saving without flag setting)
 
-**Stage/JN079.pxcm**
+**Stage/JN079.pxcm** (A Familiar House) (New Game+ house)
 
 *: Config added to door, press down to interact and bring up menus for new game plus purposes (can add/remove every weapon, add/remove all life capsules, add/remove certain items with new game plus usage), or start a true new game.
 
 **mod.pxmod**
 
 *: New game starting location set to new game plus prefab house (for use with above edit). To start a true new game, interact with the door. Additionally, weapons/bullets have been synced to JN. This is most noticeable with the Snake, which has a range increase and different damage values.
+
+**ArmsItem.tsc Stage/ 017 (Pipeworks E) 18 (Pipeworks S) 22 (Grasstown) .pxcm **
+
+*: Text fixes for previously not wrapping/overflowing text.
 
 Based off of CSM's CaveModBase (v1.0.5) found at https://cavestorymultiplayer.com/modding/
 

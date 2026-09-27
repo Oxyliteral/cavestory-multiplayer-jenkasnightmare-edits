@@ -1,6 +1,9 @@
 # cavestory-multiplayer-jenkasnightmare-edits
 
-Edits for autumn-mnya's Jenka's Nightmare for Cave Story Multiplayer. Download, and overwrite autumn's jenkasnightmare folder with this jenkasnightmare folder.
+Edits for autumn-mnya's Jenka's Nightmare for Cave Story Multiplayer.
+
+**Downloading**
+You can download the Repo by clicking the Green <> Code Button, then clicking download zip. Download CSMP, download v1.0.1 of autumn's jenkasnightmare, put it into the CSMP directory, then place the jenkasnightmare folder from this repo into the CSMP directory, and it should prompt you to overwrite the files.
 
 Specific edits currently include:
 

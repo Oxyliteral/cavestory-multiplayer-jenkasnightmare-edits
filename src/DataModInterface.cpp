@@ -1,13 +1,109 @@
-#define _TEXT_SCRIPT_FILE_
-
 #include "DataModInterface.h"
 #include "Header.h"
 #include "framework.h"
 
+#include "CSMAPI_begincode.h"
+extern CAVESTORY_MOD_API int gStageNo;
+extern CAVESTORY_MOD_API TEXT_SCRIPT gTS;
+#include "CSMAPI_endcode.h"
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 void ShootBullet_None(ShootInfo* sData, int level)
 {
+}
+
+void DrawSkip()
+{
+	// This will set the surface that we want to draw on. Passing 'SURFACE_ID_RENDERER_TEXTURE' here tells the rendering pipeline that we want to draw directly to the screen.
+	CacheSurface::SetSurfaceID(SURFACE_ID_RENDERER_TEXTURE);
+	CacheSurface::DrawBitmapBox(
+		new GUI_RECT(16, 16, GUI_POINT(200, 50)),
+		GUI_SourceRects::rc_FRAME_EscapeBox,
+		CacheSurface::BitmapBoxType::BMPBOX_TYPE_BOTH,
+		SURFACE_ID_GUI
+	);
+	CacheSurface::DrawClippedText(GUI_POINT(24, 24), BaseModeInstance::GetDefaultFont(), "Press the <Map> key to skip text,",
+		CSM_RGBA(255, 255, 255, 255), -1, true, new GUI_POINT(200, 50), 1, CSM_RGBA(0, 0, 0, 150));
+	CacheSurface::DrawClippedText(GUI_POINT(24, 36), BaseModeInstance::GetDefaultFont(), "<NOD, <CLR, and <FAC TSC.",
+		CSM_RGBA(255, 255, 255, 255), -1, true, new GUI_POINT(200, 50), 1, CSM_RGBA(0, 0, 0, 150));
+	CacheSurface::DrawClippedText(GUI_POINT(24, 48), BaseModeInstance::GetDefaultFont(), "<Inventory> key to hide this.",
+		CSM_RGBA(255, 255, 255, 255), -1, true, new GUI_POINT(200, 50), 1, CSM_RGBA(0, 0, 0, 150));
+}
+
+void OnEventFunc()
+{
+	if (CSM_CaveNet_ConnectedAsClient())
+	{
+		if (!CSM_CaveNet_IsHosting())
+		{
+			return;
+		}
+	}
+	char pLocBuffer[256];
+	char* pLocPtr = pLocBuffer;
+	BOOL clear = false;
+	while (gTS.p_read < gTS.size)
+	{
+		if ((pLocPtr - pLocBuffer) >= sizeof(pLocBuffer) - 1)
+			break;
+
+		if (gTS.data[gTS.p_read] == '<') {
+			char tsc[4];
+			memcpy(tsc, gTS.data + gTS.p_read + 1, sizeof(tsc));
+			tsc[3] = 0;
+			BOOL cancel = true;
+			if (strcmp(tsc, "NOD") == 0) {
+				cancel = false;
+			}
+			else if (strcmp(tsc, "CLR") == 0) {
+				clear = true;
+				cancel = false;
+			}
+			else if (strcmp(tsc, "FAC") == 0) {
+				cancel = false;
+			}
+			/* MAY CAUSE PROBLEMS
+			else if (strcmp(tsc, "WAI") == 0) {
+				cancel = false;
+			}
+			*/
+			if (cancel)
+				break;
+		}
+		*pLocPtr++ = gTS.data[gTS.p_read];
+		++gTS.p_read;
+	}
+
+	*pLocPtr++ = 0;
+	if (clear)
+		DisplayCustomTextToScript("<CLR");
+	// Clear NOD if we're in NOD mode. Mode of 0 means stopping TSC?
+	if (gTS.mode == 2)
+		gTS.mode = 1;
+}
+
+void OnPreDrawHUDFunc()
+{
+	if (gTS.current_event == 0)
+		return;
+	if (gTS.p_read == 0)
+		return;
+	if (*GetCurrentTextScriptConfig()->GameFlags & 2) {
+		return;
+	}
+	static BOOL skipDraw = false;
+	if (GetInput(CSM_KEY_DESC_KEYTRG) & GetKeybind(CSM_KEYBIND_DESC::CSM_KEYBIND_DESC_INVENTORY))
+	{
+		skipDraw = ~skipDraw;
+	}
+	if (!skipDraw)
+	{
+		DrawSkip();
+	}
+	if (GetInput(CSM_KEY_DESC_KEY) & GetKeybind(CSM_KEYBIND_DESC::CSM_KEYBIND_DESC_MAP))
+	{
+		OnEventFunc();
+	}
 }
 
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -73,6 +169,7 @@ int DataModInterface::OnInit()
 	CSM_RegisterBullet(45, ActBullet_Nemesis);
 	CSM_RegisterBullet(46, ActBullet_EnemyClear);
 	CSM_RegisterBullet(47, ActBullet_Star);
+	CSM_SetHook_OnPreDrawHUD(*OnPreDrawHUDFunc);
 	return 0;
 }
 

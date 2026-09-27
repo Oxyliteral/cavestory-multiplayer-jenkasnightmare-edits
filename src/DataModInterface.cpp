@@ -22,11 +22,11 @@ void DrawSkip()
 		CacheSurface::BitmapBoxType::BMPBOX_TYPE_BOTH,
 		SURFACE_ID_GUI
 	);
-	CacheSurface::DrawClippedText(GUI_POINT(24, 24), BaseModeInstance::GetDefaultFont(), "Press the <Map> key to skip text,",
+	CacheSurface::DrawClippedText(GUI_POINT(24, 24), FontHandle("Courier New", 5, 10), "Press the <Map> key to skip text,",
 		CSM_RGBA(255, 255, 255, 255), -1, true, new GUI_POINT(200, 50), 1, CSM_RGBA(0, 0, 0, 150));
-	CacheSurface::DrawClippedText(GUI_POINT(24, 36), BaseModeInstance::GetDefaultFont(), "<NOD, <CLR, and <FAC TSC.",
+	CacheSurface::DrawClippedText(GUI_POINT(24, 36), FontHandle("Courier New", 5, 10), "<NOD, <CLR, and <FAC TSC.",
 		CSM_RGBA(255, 255, 255, 255), -1, true, new GUI_POINT(200, 50), 1, CSM_RGBA(0, 0, 0, 150));
-	CacheSurface::DrawClippedText(GUI_POINT(24, 48), BaseModeInstance::GetDefaultFont(), "<Inventory> key to hide this.",
+	CacheSurface::DrawClippedText(GUI_POINT(24, 48), FontHandle("Courier New", 5, 10), "<Inventory> key to hide this.",
 		CSM_RGBA(255, 255, 255, 255), -1, true, new GUI_POINT(200, 50), 1, CSM_RGBA(0, 0, 0, 150));
 }
 

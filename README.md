@@ -24,7 +24,7 @@ Specific edits currently include:
 
 *: New game starting location set to new game plus prefab house (for use with above edit). To start a true new game, interact with the door. Additionally, weapons/bullets have been synced to JN. This is most noticeable with the Snake, which has a range increase and different damage values.
 
-**ArmsItem.tsc Stage/ 017 (Pipeworks E) 18 (Pipeworks S) 22 (Grasstown) .pxcm **
+**ArmsItem.tsc Stage/ 017 (Pipeworks E) 18 (Pipeworks S) 22 (Grasstown) .pxcm**
 
 *: Text fixes for previously not wrapping/overflowing text.
 

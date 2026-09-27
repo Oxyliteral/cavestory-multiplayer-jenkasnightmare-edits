@@ -10,7 +10,7 @@ Specific edits currently include:
 
 **jenkasnightmare.dll**
 
-*: Snake reloads every 60 frames, 20 with afterburner. Machine gun reloads faster with turbocharge. Spur charges twice as fast with the Ursa Minor (Polar Star capsule new game plus item). Event skipper comes up during events, press/hold <Map> key to skip, or <Inventory> key to hide the popup. It skips text, <NOD, <CLR, and <FAC. It can skip other TSC like <WAI, but I'm pretty sure <WAI is tied to some animations, therefore doing so may break the game, so I left that function out. In multiplayer, ONLY THE HOST may use this function.
+*: Snake reloads every 60 frames, 20 with afterburner. Machine gun reloads faster with turbocharge. Spur charges twice as fast with the Ursa Minor (Polar Star capsule new game plus item). Event skipper comes up during events, press/hold <Map> key to skip, or <Inventory> key to hide the popup. It skips text, <NOD, <CLR, and <FAC. It can skip other TSC like <WAI, but I'm pretty sure <WAI is tied to some animations, therefore doing so may break the game, so I left that function out. In multiplayer, ONLY THE HOST may use the event skipper.
 
 **head.tsc**
 

@@ -2,6 +2,10 @@
 
 Edits for autumn-mnya's Jenka's Nightmare for Cave Story Multiplayer. Download, and overwrite autumn's jenkasnightmare folder with this jenkasnightmare folder.
 
+**COMPILED FOR STABLE RELEASE v0.1.1.17b with ModBase v1.0.5**
+
+Compatibility for other stable releases and/or unstable preview builds not guaranteed. Please check the branches tabs for other versions.
+
 Specific edits currently include:
 
 **jenkasnightmare.dll**
@@ -20,7 +24,7 @@ Specific edits currently include:
 
 *: New game starting location set to new game plus prefab house (for use with above edit). To start a true new game, interact with the door. Additionally, weapons/bullets have been synced to JN. This is most noticeable with the Snake, which has a range increase and different damage values.
 
-Based off of CSM's CaveModBase (v1.0.5) found at https://cavestorymultiplayer.com/modding/
+Based off of CSM's CaveModBase found at https://cavestorymultiplayer.com/modding/
 
 Additional references found at:
 

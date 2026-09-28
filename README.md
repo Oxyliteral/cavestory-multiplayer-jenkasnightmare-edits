@@ -2,6 +2,10 @@
 
 Edits for autumn-mnya's Jenka's Nightmare for Cave Story Multiplayer.
 
+**COMPILED FOR STABLE RELEASE v0.1.1.17b with ModBase v1.0.5**
+
+Compatibility for other stable releases and/or unstable preview builds not guaranteed. Please check the branches tabs for other versions.
+
 **Downloading**
 
 You can download the repo by clicking the green [<> Code] Button, then clicking download zip. Download CSMP, download v1.0.1 of autumn's jenkasnightmare, put it into the CSMP directory, then place the jenkasnightmare folder from this repo into the CSMP directory, and it should prompt you to overwrite the files.
@@ -34,7 +38,7 @@ Specific edits currently include:
 
 
 
-Based off of CSM's CaveModBase (v1.0.5) found at https://cavestorymultiplayer.com/modding/
+Based off of CSM's CaveModBase found at https://cavestorymultiplayer.com/modding/
 
 Additional references found at:
 

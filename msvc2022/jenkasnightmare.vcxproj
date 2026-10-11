@@ -184,10 +184,13 @@
     <ClInclude Include="..\src\DataModInterface.h" />
     <ClInclude Include="..\src\framework.h" />
     <ClInclude Include="..\src\Header.h" />
+    <ClInclude Include="..\src\PlayerStates\PlayerStates.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\DataModInterface.cpp" />
     <ClCompile Include="..\src\dllmain.cpp" />
+    <ClCompile Include="..\src\PlayerStates\JenkasNightmare.cpp" />
+    <ClCompile Include="..\src\TextScript\TextScript_U.cpp" />
     <ClCompile Include="..\src\Weapons\Agility.cpp" />
     <ClCompile Include="..\src\Weapons\Blade.cpp" />
     <ClCompile Include="..\src\Weapons\Bubbler.cpp" />

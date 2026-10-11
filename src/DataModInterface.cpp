@@ -1,6 +1,11 @@
+#define _TEXT_SCRIPT_FILE_
+
 #include "DataModInterface.h"
 #include "Header.h"
 #include "framework.h"
+#include "PlayerStates/PlayerStates.h"
+#include <Subclasses/ModTextScriptCommand.h>
+#include <Subclasses/ModConfigResource.h>
 
 #include "CSMAPI_begincode.h"
 extern CAVESTORY_MOD_API int gStageNo;
@@ -170,6 +175,15 @@ int DataModInterface::OnInit()
 	CSM_RegisterBullet(46, ActBullet_EnemyClear);
 	CSM_RegisterBullet(47, ActBullet_Star);
 	CSM_SetHook_OnPreDrawHUD(*OnPreDrawHUDFunc);
+	ModTextScriptCommand::Init();
+	IMPLEMENT_PLAYER_STATE(
+		JENKASNIGHTMARE,
+		PLAYER_STATE_FLAGS::PSF_INIT | PLAYER_STATE_FLAGS::PSF_UNIT,
+		0,
+		USE_DRAW_FUNC,
+		1,
+		PLAYER_ANIMATION
+	);
 	return 0;
 }
 

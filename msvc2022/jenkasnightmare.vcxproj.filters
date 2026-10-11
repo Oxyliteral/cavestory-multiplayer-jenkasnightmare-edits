@@ -16,6 +16,12 @@
     <Filter Include="Source Files\Weapons">
       <UniqueIdentifier>{3be81244-14bf-469a-9f53-b69a8f7a0e8a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\PlayerStates">
+      <UniqueIdentifier>{249747a5-8773-426f-8f0f-c8bd799842b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\TextScript">
+      <UniqueIdentifier>{0b6cb213-2716-4e93-97b3-853c1e77661e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\DataModInterface.h">
@@ -26,6 +32,9 @@
     </ClInclude>
     <ClInclude Include="..\src\Header.h">
       <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\PlayerStates\PlayerStates.h">
+      <Filter>Source Files\PlayerStates</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -73,6 +82,12 @@
     </ClCompile>
     <ClCompile Include="..\src\Weapons\WhimStar.cpp">
       <Filter>Source Files\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\PlayerStates\JenkasNightmare.cpp">
+      <Filter>Source Files\PlayerStates</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\TextScript\TextScript_U.cpp">
+      <Filter>Source Files\TextScript</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

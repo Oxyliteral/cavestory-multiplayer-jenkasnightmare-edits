@@ -8,7 +8,7 @@ Compatibility for other stable releases and/or unstable preview builds not guara
 
 **Downloading**
 
-You can download the repo by clicking the green [<> Code] Button, then clicking download zip. Download CSMP, download v1.0.1 of autumn's jenkasnightmare, put it into the CSMP directory, then place the jenkasnightmare folder from this repo into the CSMP directory, and it should prompt you to overwrite the files.
+You can download the repo by clicking the green [<> Code] Button, then clicking download zip. Download CSMP, download v1.0.1 of autumn's jenkasnightmare, put it into the CSMP directory, then place the jenkasnightmare folder from this repo into the CSMP directory, and it should prompt you to overwrite the files. You may also want to merge the data folder as well, as it contains the character skin intended for Jenka's Nightmare.
 
 **Character Skin**
 
